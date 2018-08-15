@@ -1,0 +1,110 @@
+*{
+	margin:0;
+	padding: 0;
+    font-size: 16px;
+    font-family: 微软雅黑;
+}
+body{
+	background:url('../img/bgp.jpg') no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+/* 头部导航栏 start */
+.top{
+    position: fixed;
+    top: 0;
+	width: 100%;
+	height: 52px;
+	background-color: rgba(19, 19, 22, 0.2);
+}
+.nav a{
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    width: 80px;
+    height: 40px;
+    font-size: 18px;
+	color: white;
+}
+.nav a:hover{
+	color: #ffe600;
+    text-decoration: none;
+}
+/* 头部导航栏 end */
+
+/* GitHub盒子 start */
+.GitHub_box{
+    margin-top: 100px;
+    padding-top: 50px;
+    width: 100%;
+    height: 250px;
+    background:url('../img/point.png');
+}
+.GitHub_box h2{
+    text-align: center;
+    color: white;
+}
+.GitHub_box a{
+    display: block;
+    margin:30px auto;
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #ffe600;
+    border: #ffe600 solid 4px;
+    color: black;
+}
+.GitHub_box a:hover{
+    border: 5px solid black;
+    outline: 4px solid #ffe600;
+    transition: 0.5s;
+    text-decoration: none;
+}
+/* GitHub盒子 end */
+
+/* 项目浏览 start */
+.project{
+    margin-top:120px;
+    background-color: white;
+}
+.project_box{
+    margin: 15px 0;
+    padding: 10px 30px;
+    box-shadow: 1px 1px 5px black;
+    background-color: #fbfbfb;
+}
+.project_box:hover{
+    box-shadow: 3px 3px 20px black;
+}
+.project_box img{
+    width: 100%;
+}
+.project_box p{
+    margin:10px auto;
+    width: 90%;
+    text-align: center;
+    font-size: 20px;
+    font-family: 华文楷体;
+}
+.project_box a{
+    display: block;
+    margin:30px auto;
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #ffe600;
+    border: #ffe600 solid 4px;
+    color: black;
+}
+.project_box a:hover{
+    border: 5px solid white;
+    outline: 4px solid #ffe600;
+    transition: 0.5s;
+    text-decoration: none;
+}
+.project_box a:hover{
+}
+/* 项目浏览 stop */
