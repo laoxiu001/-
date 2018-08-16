@@ -18,11 +18,12 @@ body{
 }
 /* 头部导航栏 start */
 .top{
+    z-index:999;
     position: fixed;
     top: 0;
 	width: 100%;
-	height: 52px;
-	background-color: rgba(19, 19, 22, 0.2);
+	height: 50px;
+    background: url('../img/point.png');
 }
 .nav a{
     display: block;
@@ -37,20 +38,38 @@ body{
 	color: #ffe600;
     text-decoration: none;
 }
+.nav_xs{
+    display: none;
+}
+.nav_xs p{
+    padding-top: 3px;
+    padding-left: 20px;
+    margin: 0;
+    height: 35px;
+    font-size: 20px;
+    background: url("../img/point.png");
+}
+.nav_xs a{
+    color: white;
+}
+.nav_xs p:hover a{
+    color: yellow;
+}
 /* 头部导航栏 end */
 
 /* GitHub盒子 start */
 .GitHub{
+    padding-bottom: 50px;
 }
 .GitHub_box{
     margin-top: 100px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 40px;
+    padding-bottom: 30px;
     width: 100%;
     background:url('../img/point.png');
 }
 .GitHub_box h2{
-    font-size: 40px;
+    font-size: 20px;
     text-align: center;
     color: white;
 }
@@ -58,9 +77,9 @@ body{
     display: block;
     margin:30px auto;
     text-align: center;
-    width: 120px;
-    height: 40px;
-    font-size: 20px;
+    width: 80px;
+    height: 35px;
+    font-size: 17px;
     background-color: #ffe600;
     border: #ffe600 solid 4px;
     color: black;
@@ -68,25 +87,76 @@ body{
 .GitHub_box a:hover{
     border: 5px solid black;
     outline: 4px solid #ffe600;
-    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s ;
+    -ms-transition: 0.5s ;
+    -o-transition: 0.5s ;
+    transition: 0.5s ;
     text-decoration: none;
+}
+.button_next{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.button_next_box{
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    background-color: #ffe600;
+    text-align: center;
+}
+.button_next_box a{
+    display: block;
+    line-height: 40px;
+}
+.button_next_box:hover{
+    background-color: transparent;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+@media (min-width: 768px) {
+    .top{
+        position: static;
+        background: none;
+        background-color: rgba(19, 19, 22, 0.2);
+    }
+    .GitHub_box h2{
+        font-size: 40px;
+        text-align: center;
+        color: white;
+    }
+    .GitHub_box a{
+        width: 100px;
+        height: 50px;
+        font-size: 25px;
+    }
+    .button_next_box{
+        width: 60px;
+        height: 60px;
+    }
+    .button_next_box a{
+        line-height: 60px;
+    }
 }
 /* GitHub盒子 end */
 
 /* 项目浏览 start */
 .project{
-    margin-top:120px;
     background-color: white;
 }
 .project_box{
     margin: 15px 0;
-    padding: 10px 30px;
-    box-shadow: 1px 1px 5px black;
+    padding: 10px 0px;
+    border:1px solid #f3efef;
     background-color: #fbfbfb;
 }
 .project_box:hover{
     transition: 0.5s;
-    box-shadow: 3px 3px 20px black;
+    box-shadow: 3px 3px 20px #e1dddd;
 }
 .project_box img{
     width: 100%;
@@ -113,7 +183,11 @@ body{
 .project_box a:hover{
     border: 5px solid white;
     outline: 4px solid #ffe600;
-    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s ;
+    -ms-transition: 0.5s ;
+    -o-transition: 0.5s ;
+    transition: 0.5s ;
     text-decoration: none;
 }
 .project_box a:hover{

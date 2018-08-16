@@ -1,0 +1,33 @@
+JS£º
+
+/* lazy ÀÁ¼ÓÔØÄÚÈİ */
+$(window).scroll(function (event) {
+    var pageTopY = $(window).scrollTop();
+    var pageBottomY = $(window).scrollTop() + $(window).height();
+
+    $(".box").each(function () {
+        var boxTopY = $(this).offset().top;
+        var boxCenter = boxTopY + ($(this).height() / 2);
+
+        if (boxCenter > pageTopY && boxCenter < pageBottomY) {
+                console.log(this);
+                $(this).find('.lazy').fadeIn(3000);
+        }
+    });
+});
+
+
+HTML£º
+<div class="box" style="width:20px;height20px">
+	<div class="lazy">
+		ÄÚÈİ
+	</div>
+</div>
+
+
+CSS:
+<style>
+	.lazy{
+		display: none;
+	}
+</style>

@@ -15,24 +15,39 @@
         <div class="row">
             <img src="img/logo.png" alt="logo" style="height: 50px">
             <div class="nav fr">
-                <a href="" class="fl">主页</a>
-                <a href="" class="fl">项目</a>
-                <a href="" class="fl">GitHub</a>
-                <div class="fl" style="width: 30px"></div>
+                <a href="" class="fl hidden-xs">主页</a>
+                <a href="" class="fl hidden-xs">项目</a>
+                <a href="" class="fl hidden-xs">GitHub</a>
+                <a class="fl hidden-xs"></a>
+                <a class="fl visible-xs" onclick="showNav()" style="cursor: pointer"><img src="img/nav.png" alt="open"></a>
             </div>
         </div>
+    </div>
+    <div class="nav_xs">
+        <p><a href="#" class="clra">主页</a></p>
+        <p><a href="#" class="clra">GitHub</a></p>
+        <p><a href="#" class="clra">项目</a></p>
     </div>
 </div>
 <!-- 头部导航栏 stop -->
 
 <!-- GitHub在主页 -->
-<div class="GitHub">
+<div class="GitHub visible">
     <div class="container-fluid">
         <div class="row">
             <div class="GitHub_box">
-                <h2>访问个人GitHub查看更多项目</h2>
+                <h2>访问GitHub</h2>
+                <h2>查看更多项目</h2>
                 <a href="https://github.com/laoxiu001" target="_blank">访问</a>
             </div>
+        </div>
+    </div>
+    <!-- 下一板块按钮 -->
+    <div class="button_next">
+        <div class="button_next_box">
+            <a href="#">
+                <img src="img/double_down.png" style="width: 50%;width: 70%;">
+            </a>
         </div>
     </div>
 </div>
@@ -44,72 +59,98 @@
         <div class="row">
             <!-- 单个项目 -->
             <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="project_box">
-                    <img src="img/project1.png">
-                    <p>
-                        项目概况是指在介绍或论述某个项目时,首
-                        先综合性地简要介绍项目的基本情况。比
-                        如一个招商项目,它比一般项目概况的内容
-                        较全面,包括项目建设内容、建设规模、投
-                        资总额、市场前景、经济效益、社会效益、
-                    </p>
-                    <a href="#" class="more">访问主页</a>
+                <div class="project_box box">
+                    <div class="lazy">
+                        <img src="img/project1.png">
+                        <p>
+                            项目概况是指在介绍或论述某个项目时,首
+                            先综合性地简要介绍项目的基本情况。比
+                            如一个招商项目,它比一般项目概况的内容
+                            较全面,包括项目建设内容、建设规模、投
+                            资总额、市场前景、经济效益、社会效益、
+                        </p>
+                        <a href="#" class="more">访问主页</a>
+                    </div>
                 </div>
             </div>
             <!-- 单个项目 -->
             <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="project_box">
-                    <img src="img/project1.png">
-                    <p>
-                        项目概况是指在介绍或论述某个项目时,首
-                        先综合性地简要介绍项目的基本情况。比
-                        如一个招商项目,它比一般项目概况的内容
-                        较全面,包括项目建设内容、建设规模、投
-                        资总额、市场前景、经济效益、社会效益、
-                    </p>
-                    <a href="#" class="more">访问主页</a>
+                <div class="project_box box">
+                    <div class="lazy">
+                        <img src="img/project1.png">
+                        <p>
+                            项目概况是指在介绍或论述某个项目时,首
+                            先综合性地简要介绍项目的基本情况。比
+                            如一个招商项目,它比一般项目概况的内容
+                            较全面,包括项目建设内容、建设规模、投
+                            资总额、市场前景、经济效益、社会效益、
+                        </p>
+                        <a href="#" class="more">访问主页</a>
+                    </div>
                 </div>
             </div>
             <!-- 单个项目 -->
             <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="project_box">
-                    <img src="img/project1.png">
-                    <p>
-                        项目概况是指在介绍或论述某个项目时,首
-                        先综合性地简要介绍项目的基本情况。比
-                        如一个招商项目,它比一般项目概况的内容
-                        较全面,包括项目建设内容、建设规模、投
-                        资总额、市场前景、经济效益、社会效益、
-                    </p>
-                    <a href="#" class="more">访问主页</a>
+                <div class="project_box box">
+                    <div class="lazy">
+                        <img src="img/project1.png">
+                        <p>
+                            项目概况是指在介绍或论述某个项目时,首
+                            先综合性地简要介绍项目的基本情况。比
+                            如一个招商项目,它比一般项目概况的内容
+                            较全面,包括项目建设内容、建设规模、投
+                            资总额、市场前景、经济效益、社会效益、
+                        </p>
+                        <a href="#" class="more">访问主页</a>
+                    </div>
                 </div>
             </div>
             <!-- 单个项目 -->
             <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="project_box">
-                    <img src="img/project1.png">
-                    <p>
-                        项目概况是指在介绍或论述某个项目时,首
-                        先综合性地简要介绍项目的基本情况。比
-                        如一个招商项目,它比一般项目概况的内容
-                        较全面,包括项目建设内容、建设规模、投
-                        资总额、市场前景、经济效益、社会效益、
-                    </p>
-                    <a href="#" class="more">访问主页</a>
+                <div class="project_box box">
+                    <div class="lazy">
+                        <img src="img/project1.png">
+                        <p>
+                            项目概况是指在介绍或论述某个项目时,首
+                            先综合性地简要介绍项目的基本情况。比
+                            如一个招商项目,它比一般项目概况的内容
+                            较全面,包括项目建设内容、建设规模、投
+                            资总额、市场前景、经济效益、社会效益、
+                        </p>
+                        <a href="#" class="more">访问主页</a>
+                    </div>
                 </div>
             </div>
             <!-- 单个项目 -->
             <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="project_box">
-                    <img src="img/project1.png">
-                    <p>
-                        项目概况是指在介绍或论述某个项目时,首
-                        先综合性地简要介绍项目的基本情况。比
-                        如一个招商项目,它比一般项目概况的内容
-                        较全面,包括项目建设内容、建设规模、投
-                        资总额、市场前景、经济效益、社会效益、
-                    </p>
-                    <a href="#" class="more">访问主页</a>
+                <div class="project_box box">
+                    <div class="lazy">
+                        <img src="img/project1.png">
+                        <p>
+                            项目概况是指在介绍或论述某个项目时,首
+                            先综合性地简要介绍项目的基本情况。比
+                            如一个招商项目,它比一般项目概况的内容
+                            较全面,包括项目建设内容、建设规模、投
+                            资总额、市场前景、经济效益、社会效益、
+                        </p>
+                        <a href="#" class="more">访问主页</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 单个项目 -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="project_box box">
+                    <div class="lazy">
+                        <img src="img/project1.png">
+                        <p>
+                            项目概况是指在介绍或论述某个项目时,首
+                            先综合性地简要介绍项目的基本情况。比
+                            如一个招商项目,它比一般项目概况的内容
+                            较全面,包括项目建设内容、建设规模、投
+                            资总额、市场前景、经济效益、社会效益、
+                        </p>
+                        <a href="#" class="more">访问主页</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -118,7 +159,7 @@
 <!-- 项目浏览 stop -->
 
 <!-- 专业技能 start -->
-<div class="skills lazy">
+<div class="skills">
     <div class="container-fluid">
         <div class="row">
             <h2>专业技能</h2>
