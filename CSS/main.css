@@ -37,11 +37,12 @@ body{
 .GitHub_box{
     margin-top: 100px;
     padding-top: 50px;
+    padding-bottom: 50px;
     width: 100%;
-    height: 250px;
     background:url('../img/point.png');
 }
 .GitHub_box h2{
+    font-size: 40px;
     text-align: center;
     color: white;
 }
@@ -76,6 +77,7 @@ body{
     background-color: #fbfbfb;
 }
 .project_box:hover{
+    transition: 0.5s;
     box-shadow: 3px 3px 20px black;
 }
 .project_box img{
@@ -94,7 +96,8 @@ body{
     text-align: center;
     width: 120px;
     height: 40px;
-    font-size: 20px;
+    line-height: 32px;
+    font-size: 18px;
     background-color: #ffe600;
     border: #ffe600 solid 4px;
     color: black;
@@ -108,3 +111,36 @@ body{
 .project_box a:hover{
 }
 /* 项目浏览 stop */
+
+/* 专业技能 start */
+.skills{
+    padding-bottom: 20px;
+    background: rgba(19, 19, 22, 0.5);
+}
+.skills h2{
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+.progress_cover{
+    width: 100%;
+    height: 25px;
+    border-radius: 10px;
+    background-color: white;
+}
+.percent{
+    height: 25px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #ffe600;
+}
+.percent p{
+    margin-right: 10px;
+    text-align: right;
+    font-size: 20px;
+}
+.skills_box h3{
+    text-align: center;
+    color: white;
+}
+/* 专业技能 stop */
