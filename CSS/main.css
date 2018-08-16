@@ -4,11 +4,17 @@
     font-size: 16px;
     font-family: 微软雅黑;
 }
+html{
+    display: none;
+}
 body{
 	background:url('../img/bgp.jpg') no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
 	background-size: cover;
+}
+.lazy{
+    display: none;
 }
 /* 头部导航栏 start */
 .top{
@@ -34,6 +40,8 @@ body{
 /* 头部导航栏 end */
 
 /* GitHub盒子 start */
+.GitHub{
+}
 .GitHub_box{
     margin-top: 100px;
     padding-top: 50px;
