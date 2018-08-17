@@ -1,7 +1,7 @@
 /* 整个 HTML 页面 淡入淡出 */
 $(document).ready(function () {
     $("html").fadeIn(1000);
-    var top = $(".top").height();
+    var top = $(".top").height() + 50;
     visible(top);
 });
 /* 整个 HTML 页面 淡入淡出 */
@@ -18,7 +18,7 @@ function showNav() {
 function hideNav() {
     var width = $(window).width();
     if (width >= 768) {
-        $(".nav_xs").css("display", "none")
+        $(".nav_xs").css("display", "none");
     }
 }
 /* 屏幕变大隐藏div */
@@ -29,7 +29,7 @@ function visible(height) {
 }
 $(window).resize(function () {
     //浏览器大小变化
-    var top = $(".top").height();
+    var top = $(".top").height() + 50;
     visible(top);
     hideNav();
 });
@@ -45,9 +45,12 @@ $(window).scroll(function (event) {
         var boxCenter = boxTopY + ($(this).height() / 2);
 
         if (boxCenter > pageTopY && boxCenter < pageBottomY) {
-                console.log(this);
-                $(this).find('.lazy').fadeIn(3000);
+            //淡入淡出效果
+            $(this).find('.lazy').fadeIn(2000);
+            var width = $(this).find('p').text();
+            $(this).find('.percent').animate({width: width},1500);
         }
     });
 });
+
 /* lazy 懒加载内容 */

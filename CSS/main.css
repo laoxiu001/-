@@ -16,11 +16,13 @@ body{
 .lazy{
     display: none;
 }
+.percent{
+    width: 0;
+}
 /* 头部导航栏 start */
 .top{
     z-index:999;
-    position: fixed;
-    top: 0;
+    position: relative;
 	width: 100%;
 	height: 50px;
     background: url('../img/point.png');
@@ -59,10 +61,9 @@ body{
 
 /* GitHub盒子 start */
 .GitHub{
-    padding-bottom: 50px;
+    padding-top: 50px;
 }
 .GitHub_box{
-    margin-top: 100px;
     padding-top: 40px;
     padding-bottom: 30px;
     width: 100%;
@@ -120,9 +121,13 @@ body{
 }
 @media (min-width: 768px) {
     .top{
-        position: static;
+        position: fixed;
+        top: 0;
         background: none;
         background-color: rgba(19, 19, 22, 0.2);
+    }
+    .GitHub{
+        margin-top: 50px;
     }
     .GitHub_box h2{
         font-size: 40px;
@@ -189,8 +194,6 @@ body{
     -o-transition: 0.5s ;
     transition: 0.5s ;
     text-decoration: none;
-}
-.project_box a:hover{
 }
 /* 项目浏览 stop */
 
