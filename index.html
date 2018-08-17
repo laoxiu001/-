@@ -10,29 +10,34 @@
 </head>
 <body>
 <!-- 头部导航栏 start -->
-<div class="top">
+<div class="top"
     <div class="container-fluid">
         <div class="row">
             <img src="img/logo.png" alt="logo" style="height: 50px">
             <div class="nav fr">
-                <a href="" class="fl hidden-xs">主页</a>
-                <a href="" class="fl hidden-xs">项目</a>
-                <a href="" class="fl hidden-xs">GitHub</a>
+                <a href="#index" class="fl hidden-xs">主页</a>
+                <a href="#project" class="fl hidden-xs">项目</a>
+                <a href="#skills" class="fl hidden-xs">技能</a>
                 <a class="fl hidden-xs"></a>
                 <a class="fl visible-xs" onclick="showNav()" style="cursor: pointer"><img src="img/nav.png" alt="open"></a>
             </div>
         </div>
     </div>
     <div class="nav_xs">
-        <p><a href="#" class="clra">主页</a></p>
-        <p><a href="#" class="clra">GitHub</a></p>
-        <p><a href="#" class="clra">项目</a></p>
+        <ul>
+            <li><a href="#index" class="clra">主页</a></li>
+            <li><a href="#project" class="clra">项目</a></li>
+            <li><a href="#skills" class="clra">技能</a></li>
+        </ul>
+        <!--<p><a href="#index" class="clra">主页</a></p>
+        <p><a href="#project" class="clra">项目</a></p>
+        <p><a href="#skills" class="clra">技能</a></p>-->
     </div>
 </div>
 <!-- 头部导航栏 stop -->
 
 <!-- GitHub在主页 -->
-<div class="GitHub visible">
+<div class="GitHub visible" id="index">
     <div class="container-fluid">
         <div class="row">
             <div class="GitHub_box">
@@ -54,7 +59,7 @@
 <!-- GitHub在主页 -->
 
 <!-- 项目浏览 start -->
-<div class="project">
+<div class="project" id="project">
     <div class="container-fluid">
         <div class="row">
             <!-- 单个项目 -->
@@ -159,7 +164,7 @@
 <!-- 项目浏览 stop -->
 
 <!-- 专业技能 start -->
-<div class="skills">
+<div class="skills" id="skills">
     <div class="container-fluid">
         <div class="row">
             <h2>专业技能</h2>

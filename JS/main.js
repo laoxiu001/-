@@ -46,9 +46,10 @@ $(window).scroll(function (event) {
 
         if (boxCenter > pageTopY && boxCenter < pageBottomY) {
             //淡入淡出效果
-            $(this).find('.lazy').fadeIn(2000);
-            var width = $(this).find('p').text();
-            $(this).find('.percent').animate({width: width},1500);
+            $(this).find('.lazy').fadeIn(3000);
+            var width_progress = $(this).find('p').text();
+            $(this).find('.percent').animate({width: width_progress},2000);
+
         }
     });
 });

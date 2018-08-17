@@ -19,6 +19,14 @@ body{
 .percent{
     width: 0;
 }
+.up{
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0;
+}
 /* 头部导航栏 start */
 .top{
     z-index:999;
@@ -41,9 +49,13 @@ body{
     text-decoration: none;
 }
 .nav_xs{
+    position: absolute;
+    top:50px;
+    width: 100%;
     display: none;
 }
-.nav_xs p{
+.nav_xs ul li{
+    text-align: center;
     padding-top: 3px;
     padding-left: 20px;
     margin: 0;
@@ -51,10 +63,11 @@ body{
     font-size: 20px;
     background: url("../img/point.png");
 }
-.nav_xs a{
+.nav_xs ul li a{
+    display: block;
     color: white;
 }
-.nav_xs p:hover a{
+.nav_xs ul li:hover a{
     color: yellow;
 }
 /* 头部导航栏 end */
@@ -70,17 +83,19 @@ body{
     background:url('../img/point.png');
 }
 .GitHub_box h2{
-    font-size: 20px;
+    font-family: 隶书;
+    font-size: 30px;
     text-align: center;
     color: white;
 }
 .GitHub_box a{
+    font-family: 隶书;
     display: block;
     margin:30px auto;
     text-align: center;
     width: 80px;
     height: 35px;
-    font-size: 17px;
+    font-size: 20px;
     background-color: #ffe600;
     border: #ffe600 solid 4px;
     color: black;
@@ -156,6 +171,7 @@ body{
 .project_box{
     margin: 15px 0;
     padding: 10px 0px;
+    min-width: 350px;
     border:1px solid #f3efef;
     background-color: #fbfbfb;
 }
