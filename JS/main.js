@@ -49,9 +49,19 @@ $(window).scroll(function (event) {
             $(this).find('.lazy').fadeIn(3000);
             var width_progress = $(this).find('p').text();
             $(this).find('.percent').animate({width: width_progress},2000);
-
         }
     });
 });
-
 /* lazy 懒加载内容 */
+
+
+/*var AnchorClick = function (obj) {
+    var href = $(obj).attr("href");
+    var pos = $(href).offset().top;
+    $("html,body").animate({ scrollTop: pos }, 4000);
+};*/
+
+function locate(id) {
+    var top = $(id).offset().top;
+    $("html,body").animate({ scrollTop: top }, 1000);
+}
