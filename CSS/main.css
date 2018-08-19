@@ -13,18 +13,18 @@ body{
 	background-attachment: fixed;
 	background-size: cover;
 }
-.lazy{
-    display: none;
-}
 .percent{
     width: 0;
 }
-.up{
-    -webkit-transform: translateY(-100%);
-    -moz-transform: translateY(-100%);
-    -ms-transform: translateY(-100%);
-    -o-transform: translateY(-100%);
-    transform: translateY(-100%);
+.down{
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+    opacity: 0;
+}
+.lazy{
     opacity: 0;
 }
 /* 头部导航栏 start */
@@ -48,6 +48,9 @@ body{
 .nav a:hover{
 	color: #ffe600;
     text-decoration: none;
+}
+.nav a:active{
+    border-bottom: 1px solid #ffe600;
 }
 .nav_xs{
     position: absolute;
@@ -84,13 +87,11 @@ body{
     background:url('../img/point.png');
 }
 .GitHub_box h2{
-    font-family: 隶书;
     font-size: 30px;
     text-align: center;
     color: white;
 }
 .GitHub_box a{
-    font-family: 隶书;
     display: block;
     margin:30px auto;
     text-align: center;
@@ -169,16 +170,42 @@ body{
 .project{
     background-color: white;
 }
+.project h2{
+    text-align: center;
+    font-size: 40px;
+}
 .project_box{
     margin: 15px 0;
-    padding: 10px 0px;
+    padding-bottom: 20px;
     min-width: 350px;
     border:1px solid #f3efef;
     background-color: #fbfbfb;
+    text-align: center;
 }
 .project_box:hover{
     transition: 0.5s;
     box-shadow: 3px 3px 20px #e1dddd;
+}
+.project_box img{
+    -webkit-transition: 3s;
+    -moz-transition: 3s ;
+    -ms-transition: 3s ;
+    -o-transition: 3s ;
+    transition: 3s ;
+}
+.project_box p{
+    -webkit-transition: 3s;
+    -moz-transition: 3s ;
+    -ms-transition: 3s ;
+    -o-transition: 3s ;
+    transition: 3s ;
+}
+.project_box a{
+    -webkit-transition: 3s;
+    -moz-transition: 3s ;
+    -ms-transition: 3s ;
+    -o-transition: 3s ;
+    transition: 3s ;
 }
 .project_box img{
     width: 100%;
@@ -191,8 +218,6 @@ body{
     font-family: 华文楷体;
 }
 .project_box a{
-    display: block;
-    margin:30px auto;
     text-align: center;
     width: 120px;
     height: 40px;
@@ -246,3 +271,43 @@ body{
     color: white;
 }
 /* 专业技能 stop */
+
+
+/* 个人荣誉 start */
+.honor{
+    margin-top: 50px;
+    padding-bottom: 50px;
+    background-color: white;
+}
+.honor h2{
+    text-align: center;
+}
+.honor h3{
+    font-size: 40px;
+    font-weight: bold;
+}
+.honor p{
+    font-size: 25px;
+    font-family: 华文楷体;
+}
+.honor_box{
+    margin-top: 20px;
+    width: 100%;
+    border: 2px solid #b2b2b2;
+    text-align: center;
+}
+.honor_box h3{
+    -webkit-transition: 3s;
+    -moz-transition: 3s ;
+    -ms-transition: 3s ;
+    -o-transition: 3s ;
+    transition: 3s ;
+}
+.honor_box p{
+    -webkit-transition: 3s;
+    -moz-transition: 3s ;
+    -ms-transition: 3s ;
+    -o-transition: 3s ;
+    transition: 3s ;
+}
+/* 个人荣誉 stop */

@@ -45,23 +45,21 @@ $(window).scroll(function (event) {
         var boxCenter = boxTopY + ($(this).height() / 2);
 
         if (boxCenter > pageTopY && boxCenter < pageBottomY) {
-            //淡入淡出效果
-            $(this).find('.lazy').fadeIn(3000);
+            //出现效果
+            $(this).find('.lazy').removeClass('lazy');
+            //进度条效果
             var width_progress = $(this).find('p').text();
             $(this).find('.percent').animate({width: width_progress},2000);
+            //淡入淡出效果
+            $(this).find('.down').removeClass('down');
         }
     });
 });
 /* lazy 懒加载内容 */
 
-
-/*var AnchorClick = function (obj) {
-    var href = $(obj).attr("href");
-    var pos = $(href).offset().top;
-    $("html,body").animate({ scrollTop: pos }, 4000);
-};*/
-
+/* 锚点跳转动画 */
 function locate(id) {
     var top = $(id).offset().top;
     $("html,body").animate({ scrollTop: top }, 1000);
 }
+/* 锚点跳转动画 */

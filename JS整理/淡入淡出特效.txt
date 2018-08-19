@@ -1,0 +1,44 @@
+
+/* lazy 懒加载内容 */
+$(window).scroll(function (event) {
+    var pageTopY = $(window).scrollTop();
+    var pageBottomY = $(window).scrollTop() + $(window).height();
+
+    $(".box").each(function () {
+        var boxTopY = $(this).offset().top;
+        var boxCenter = boxTopY + ($(this).height() / 2);
+
+        if (boxCenter > pageTopY && boxCenter < pageBottomY) {
+            //淡入淡出效果
+            $(this).find('.down').removeClass('down');
+        }
+    });
+});
+
+
+HTML：
+<div id="content" class="box" style="width:20px;height20px">
+	<div class="down">
+		内容
+	</div>
+</div>
+
+
+CSS:
+<style>
+	.down{
+		-webkit-transform: translateY(100%);
+		-moz-transform: translateY(100%);
+		-ms-transform: translateY(100%);
+		-o-transform: translateY(100%);
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	#content div{
+		-webkit-transition: 3s;
+		-moz-transition: 3s ;
+		-ms-transition: 3s ;
+		-o-transition: 3s ;
+		transition: 3s ;
+	}
+</style>
