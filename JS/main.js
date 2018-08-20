@@ -65,8 +65,6 @@ $(window).scroll(function (event) {
                 $(this).removeClass('box');
             }
 
-
-
             //调用数字自动增长方法
             /*increase('.box','.increase1');
             increase('.box','.increase2');
@@ -82,7 +80,8 @@ increase('.box','.increase3');
 /* 数字自动增长动画 */
 function increase(box,className) {
     var time = 3; //自定义设置增长所用时间
-    var number = $('.box').find(className).text(); //获取所要增长的最终数量
+    var number_text = $('.box').find(className).text(); //获取所要增长的数量字符串
+    var number = parseInt(number_text.replace(',','')); //替换逗号获取所要增长的最终数量
     var ms = 1000 * time / number; //计算每次增加所需毫秒数
 //每次计数最低时间为16ms
     if (ms < 16) {
@@ -96,7 +95,7 @@ function increase(box,className) {
         num = num + count; //num递增
         $('.box').find(className).text(num);
         if (num >= number) {
-            $('.box').find(className).text(number);
+            $('.box').find(className).text(number_text + "+"); //将最终值添加符号重新显示
             clearInterval(increase);
         }
     }, ms)

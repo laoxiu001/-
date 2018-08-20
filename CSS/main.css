@@ -168,6 +168,7 @@ body{
 
 /* 项目浏览 start */
 .project{
+    padding-bottom: 20px;
     background-color: white;
 }
 .project h2{
@@ -280,6 +281,7 @@ body{
     background-color: white;
 }
 .honor h2{
+    font-size: 40px;
     text-align: center;
 }
 .honor h3{
@@ -311,3 +313,88 @@ body{
     transition: 3s ;
 }
 /* 个人荣誉 stop */
+
+/* 联系我们 */
+.contact{
+    padding-bottom: 50px;
+    background: url("../img/point.png");
+}
+.contact h2{
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}
+.contact_box input,textarea{
+    width: 100%;
+    margin-top: 20px;
+    padding:8px 20px;
+    border: 2px solid #cccccc;
+    outline: 2px solid #cccccc;
+    background: transparent;
+    color: white;
+}
+.contact_box input:focus,textarea:focus{
+    border: 2px solid #ffe600;
+    outline: 2px solid #ffe600;
+    background: url("../img/point.png");
+}
+/* 联系我们 */
+
+/* 底部版权信息 start */
+.bottom{
+    width: 100%;
+    padding-top: 50px;
+    background-color: #131217;
+    text-align: center;
+}
+.text{
+    padding-bottom: 10px;
+}
+.text p{
+    text-align: center;
+    color: #707070;
+}
+.text p a{
+    color: #ffe600;
+}
+.btn{
+    padding-bottom: 20px;
+}
+.btn a{
+    display: block;
+    width: 30px;
+    height:30px;
+}
+.icon_home:hover{
+    background-color: #ffe600;
+}
+.icon_qq:hover{
+    background-color: #00a3ff;
+}
+.icon_wechat:hover{
+    background-color: #1aad19;
+}
+.icon_email:hover{
+    background-color: #ff594d;
+}
+.btn_up{
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    background-color: #ffe600;
+    text-align: center;
+}
+.btn_up a{
+    display: block;
+    line-height: 40px;
+}
+.btn_up:hover {
+    background-color: transparent;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+
+/* 底部版权信息 stop */
