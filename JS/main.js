@@ -45,13 +45,28 @@ $(window).scroll(function (event) {
         var boxCenter = boxTopY + ($(this).height() / 2);
 
         if (boxCenter > pageTopY && boxCenter < pageBottomY) {
-            //出现效果
-            $(this).find('.lazy').removeClass('lazy');
-            //进度条效果
-            var width_progress = $(this).find('p').text();
-            $(this).find('.percent').animate({width: width_progress}, 2000);
-            //淡入淡出效果
-            $(this).find('.down').removeClass('down');
+
+            //通过判断box类的子元素是否有对应的类来执行不同动画
+            if($(this).children('.lazy').hasClass('lazy')){
+                //出现效果
+                $(this).find('.lazy').removeClass('lazy');
+                //动画完毕清除box类下次不重复遍历该类，提高执行效率
+                $(this).removeClass('box');
+            }else if($(this).children('.progress_cover').children('.percent').hasClass('percent')){
+                //进度条效果
+                var width_progress = $(this).find('p').text();
+                $(this).find('.percent').animate({width: width_progress}, 2000);
+                //动画完毕清除box类下次不重复遍历该类，提高执行效率
+                $(this).removeClass('box');
+            }else if($(this).children('.down').hasClass('down')){
+                //淡入淡出效果
+                $(this).find('.down').removeClass('down');
+                //动画完毕清除box类下次不重复遍历该类，提高执行效率
+                $(this).removeClass('box');
+            }
+
+
+
             //调用数字自动增长方法
             /*increase('.box','.increase1');
             increase('.box','.increase2');
