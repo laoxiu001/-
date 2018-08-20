@@ -49,17 +49,48 @@ $(window).scroll(function (event) {
             $(this).find('.lazy').removeClass('lazy');
             //进度条效果
             var width_progress = $(this).find('p').text();
-            $(this).find('.percent').animate({width: width_progress},2000);
+            $(this).find('.percent').animate({width: width_progress}, 2000);
             //淡入淡出效果
             $(this).find('.down').removeClass('down');
+            //调用数字自动增长方法
+            /*increase('.box','.increase1');
+            increase('.box','.increase2');
+            increase('.box','.increase3');*/
+
         }
     });
 });
 /* lazy 懒加载内容 */
+increase('.box','.increase1');
+increase('.box','.increase2');
+increase('.box','.increase3');
+/* 数字自动增长动画 */
+function increase(box,className) {
+    var time = 3; //自定义设置增长所用时间
+    var number = $('.box').find(className).text(); //获取所要增长的最终数量
+    var ms = 1000 * time / number; //计算每次增加所需毫秒数
+//每次计数最低时间为16ms
+    if (ms < 16) {
+        ms = 16;
+    }
+    var count = parseInt(number / (time * 1000) * ms) //计算每次count递增数量
+    var num = 0;//初始值
+
+    $('.box').find(className).text(num); //从0开始增加
+    var increase = setInterval(function () {
+        num = num + count; //num递增
+        $('.box').find(className).text(num);
+        if (num >= number) {
+            $('.box').find(className).text(number);
+            clearInterval(increase);
+        }
+    }, ms)
+}
+/* 数字自动增长动画 */
 
 /* 锚点跳转动画 */
 function locate(id) {
     var top = $(id).offset().top;
-    $("html,body").animate({ scrollTop: top }, 1000);
+    $("html,body").animate({scrollTop: top}, 1000);
 }
 /* 锚点跳转动画 */
