@@ -341,7 +341,7 @@ body{
 .label_up {
     color: white;
     position: absolute;
-    top: 34px;
+    top: 21px;
     opacity: 0;
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;

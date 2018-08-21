@@ -109,7 +109,7 @@ $('.contact_text').blur(function () {
         return;
     }
     //标签下降动画
-    $(this).parent().find('.label_up').animate({top: 34, opacity: 0}, 50);
+    $(this).parent().find('.label_up').animate({top: 21, opacity: 0}, 50);
 });
 /* 标签上升动画 */
 
