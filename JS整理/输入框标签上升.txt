@@ -1,0 +1,48 @@
+输入框获得焦点时标签上升特效：
+
+
+/* 标签上升动画 */
+$('.contact_text').focus(function () {
+    //标签上升动画
+    $(this).parent().find('.label_up').animate({top: 3, opacity: 100}, 50);
+})
+$('.contact_text').blur(function () {
+    //如果input框有内容
+    if ($(this).val() != '') {
+        //标签上升动画
+        $(this).parent().find('.label_up').animate({top: 3, opacity: 100}, 50);
+        return;
+    }
+    //标签下降动画
+    $(this).parent().find('.label_up').animate({top: 34, opacity: 0}, 50);
+});
+/* 标签上升动画 */
+
+
+HTML：
+<div class="contact_box1">
+	<input type="text" class="contact_text input" 
+		placeholder="姓名" onfocus="placeholder=''" onblur="placeholder='姓名'">
+	<label class="label_up">姓名</label>
+</div>
+<div class="contact_box2">
+	<input type="text" class="contact_text input" 
+		placeholder="学号" onfocus="placeholder=''" onblur="placeholder='学号'">
+	<label class="label_up">学号</label>
+</div>
+
+
+CSS:
+<style>
+	.label_up {
+		color: white;
+		position: absolute;
+		top: 34px;
+		opacity: 0;
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-ms-transition: 0.5s;
+		-o-transition: 0.5s;
+		transition: 0.5s;
+	}
+</style>

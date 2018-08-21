@@ -324,19 +324,30 @@ body{
     color: white;
     text-align: center;
 }
-.contact_box input,textarea{
+.input{
     width: 100%;
-    margin-top: 20px;
+    margin-top: 25px;
     padding:8px 20px;
     border: 2px solid #cccccc;
     outline: 2px solid #cccccc;
     background: transparent;
     color: white;
 }
-.contact_box input:focus,textarea:focus{
+.input:focus{
     border: 2px solid #ffe600;
     outline: 2px solid #ffe600;
-    background: url("../img/point.png");
+    background-color: rgba(255, 255,255,0.1);
+}
+.label_up {
+    color: white;
+    position: absolute;
+    top: 34px;
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
 }
 /* 联系我们 */
 

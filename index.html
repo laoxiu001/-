@@ -19,6 +19,7 @@
                 <a class="fl hidden-xs" onclick="locate('#project')">项目</a>
                 <a class="fl hidden-xs" onclick="locate('#skills')">技能</a>
                 <a class="fl hidden-xs" onclick="locate('#honor')">荣誉</a>
+                <a class="fl hidden-xs" onclick="locate('#contact')">联系</a>
                 <a class="fl hidden-xs"></a>
                 <a class="fl visible-xs" onclick="showNav()" style="cursor: pointer"><img src="img/nav.png" alt="open"></a>
             </div>
@@ -30,6 +31,7 @@
             <li><a class="clra" onclick="locate('#project')">项目</a></li>
             <li><a class="clra" onclick="locate('#skills')">技能</a></li>
             <li><a class="clra" onclick="locate('#honor')">荣誉</a></li>
+            <li><a class="clra" onclick="locate('#contact')">联系</a></li>
         </ul>
     </div>
 </div>
@@ -329,26 +331,31 @@
             <div class="col-xs-12 col-md-10 col-md-offset-1">
                 <!-- 短输入框 -->
                 <div class="col-xs-12 col-sm-4">
-                    <div class="contact_box">
-                        <input type="text" placeholder="姓名">
+                    <div class="contact_box1">
+                        <input type="text" class="contact_text input"
+                               placeholder="姓名" onfocus="placeholder=''" onblur="placeholder='姓名'">
+                        <label class="label_up">姓名</label>
                     </div>
                 </div>
                 <!-- 短输入框 -->
                 <div class="col-xs-12 col-sm-4">
-                    <div class="contact_box">
-                        <input type="text" placeholder="邮箱">
+                    <div class="contact_box2">
+                        <input type="text" class="contact_text input">
+                        <label class="label_up">邮箱</label>
                     </div>
                 </div>
                 <!-- 短输入框 -->
                 <div class="col-xs-12 col-sm-4">
-                    <div class="contact_box">
-                        <input type="text" placeholder="手机">
+                    <div class="contact_box3">
+                        <input type="text" class="contact_text input">
+                        <label class="label_up">手机</label>
                     </div>
                 </div>
-                <!-- 长输入框  -->
+                <!-- 文本域  -->
                 <div class="col-xs-12">
-                    <div class="contact_box">
-                        <textarea type="text" rows="7" placeholder="留言内容"></textarea>
+                    <div class="contact_box4">
+                        <textarea type="text" rows="7" class="contact_text input"></textarea>
+                        <label class="label_up">留言内容</label>
                     </div>
                 </div>
             </div>
