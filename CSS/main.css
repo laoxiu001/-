@@ -179,7 +179,7 @@ body{
     margin: 15px 0;
     padding-bottom: 20px;
     min-width: 350px;
-    border:1px solid #f3efef;
+    border:2px solid #f3efef;
     background-color: #fbfbfb;
     text-align: center;
 }
@@ -188,6 +188,9 @@ body{
     box-shadow: 3px 3px 20px #e1dddd;
 }
 .project_box img{
+    cursor: pointer;
+    width: 100%;
+    height: 133px;
     -webkit-transition: 3s;
     -moz-transition: 3s ;
     -ms-transition: 3s ;
@@ -195,6 +198,12 @@ body{
     transition: 3s ;
 }
 .project_box p{
+    /* p标签超出行数自动隐藏 */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+
     -webkit-transition: 3s;
     -moz-transition: 3s ;
     -ms-transition: 3s ;
