@@ -1,0 +1,71 @@
+
+/* lazy 懒加载内容 */
+$(window).scroll(function (event) {
+    var pageTopY = $(window).scrollTop();
+    var pageBottomY = $(window).scrollTop() + $(window).height();
+
+    $(".box").each(function () {
+        var boxTopY = $(this).offset().top;
+        var boxCenter = boxTopY + ($(this).height() / 2);
+
+			if ($(this).children().hasClass('increase1')) {
+                //执行increase1增长
+                increase('.increase1');
+                //动画完毕清除box类下次不重复遍历该类，提高执行效率
+                $(this).removeClass('box');
+            }else if ($(this).children().hasClass('increase2')) {
+                //执行increase2增长
+                increase('.increase2');
+                //动画完毕清除box类下次不重复遍历该类，提高执行效率
+                $(this).removeClass('box');
+            }
+    });
+});
+
+/* 数字自动增长动画 */
+function increase(className) {
+    var time = 3; //自定义设置增长所用时间
+    var number_text = $('.increase').find(className).text(); //获取所要增长的数量字符串
+    var number = parseInt(number_text.replace(',', '')); //替换逗号获取所要增长的最终数量
+    var ms = 1000 * time / number; //计算每次增加所需毫秒数
+//每次计数最低时间为16ms
+    if (ms < 16) {
+        ms = 16;
+    }
+    var count = parseInt(number / (time * 1000) * ms) //计算每次count递增数量
+    var num = 0;//初始值
+
+    $('.increase').find(className).text(num); //从0开始增加
+    var increase = setInterval(function () {
+        num = num + count; //num递增
+        $('.increase').find(className).text(num);
+
+        if (num >= number) {
+            $('.increase').find(className).text(number_text + "+"); //将最终值添加符号重新显示
+            $(className).parent().removeClass('increase');
+            clearInterval(increase);
+        }
+    }, ms)
+}
+/* 数字自动增长动画 */
+
+
+
+
+HTML：
+<div id="content" class="box increase" style="width:20px;height20px">
+	<div class="increase1">
+		20,0000
+	</div>
+</div>
+<div id="content" class="box increase" style="width:20px;height20px">
+	<div class="increase2">
+		1,025
+	</div>
+</div>
+
+
+CSS:
+<style>
+	none
+</style>

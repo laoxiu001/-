@@ -63,18 +63,31 @@ $(window).scroll(function (event) {
                 $(this).find('.down').removeClass('down');
                 //动画完毕清除box类下次不重复遍历该类，提高执行效率
                 $(this).removeClass('box');
+            } else if ($(this).children().hasClass('increase1')) {
+                //执行increase1增长
+                increase('.increase1');
+                //动画完毕清除box类下次不重复遍历该类，提高执行效率
+                $(this).removeClass('box');
+            }else if ($(this).children().hasClass('increase2')) {
+                //执行increase2增长
+                increase('.increase2');
+                //动画完毕清除box类下次不重复遍历该类，提高执行效率
+                $(this).removeClass('box');
+            }else if ($(this).children().hasClass('increase3')) {
+                //执行increase3增长
+                increase('.increase3');
+                //动画完毕清除box类下次不重复遍历该类，提高执行效率
+                $(this).removeClass('box');
             }
         }
     });
 });
 /* lazy 懒加载内容 */
-increase('.box', '.increase1');
-increase('.box', '.increase2');
-increase('.box', '.increase3');
+
 /* 数字自动增长动画 */
-function increase(box, className) {
+function increase(className) {
     var time = 3; //自定义设置增长所用时间
-    var number_text = $('.box').find(className).text(); //获取所要增长的数量字符串
+    var number_text = $('.increase').find(className).text(); //获取所要增长的数量字符串
     var number = parseInt(number_text.replace(',', '')); //替换逗号获取所要增长的最终数量
     var ms = 1000 * time / number; //计算每次增加所需毫秒数
 //每次计数最低时间为16ms
@@ -84,12 +97,14 @@ function increase(box, className) {
     var count = parseInt(number / (time * 1000) * ms) //计算每次count递增数量
     var num = 0;//初始值
 
-    $('.box').find(className).text(num); //从0开始增加
+    $('.increase').find(className).text(num); //从0开始增加
     var increase = setInterval(function () {
         num = num + count; //num递增
-        $('.box').find(className).text(num);
+        $('.increase').find(className).text(num);
+
         if (num >= number) {
-            $('.box').find(className).text(number_text + "+"); //将最终值添加符号重新显示
+            $('.increase').find(className).text(number_text + "+"); //将最终值添加符号重新显示
+            $(className).parent().removeClass('increase');
             clearInterval(increase);
         }
     }, ms)
