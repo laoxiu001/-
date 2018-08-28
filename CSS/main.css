@@ -200,6 +200,7 @@ body{
 .project_box p{
     /* p标签超出行数自动隐藏 */
     display: -webkit-box;
+
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
@@ -350,7 +351,8 @@ body{
 .label_up {
     color: white;
     position: absolute;
-    top: 21px;
+    left: 15px;
+    top: 20px;
     opacity: 0;
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
